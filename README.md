@@ -27,21 +27,7 @@ Add to your `.imp/gits/config.nix`:
       ];
 
       # Boilerplate - spawned once, customize as needed
-      boilerplate = [
-        { src = "boilerplate/.cargo/config.toml"; dest = ".cargo/config.toml"; }
-        { src = "boilerplate/.envrc"; dest = ".envrc"; }
-        { src = "boilerplate/.gitignore"; dest = ".gitignore"; }
-        { src = "boilerplate/.rgignore"; dest = ".rgignore"; }
-        { src = "boilerplate/Cargo.toml"; dest = "Cargo.toml"; }
-        { src = "boilerplate/flake.nix"; dest = "flake.nix"; }
-        { src = "boilerplate/nix/flake/default.nix"; dest = "nix/flake/default.nix"; }
-        { src = "boilerplate/nix/flake/inputs.nix"; dest = "nix/flake/inputs.nix"; }
-        { src = "boilerplate/nix/outputs/perSystem/devShells.nix"; dest = "nix/outputs/perSystem/devShells.nix"; }
-        { src = "boilerplate/nix/outputs/perSystem/checks.nix"; dest = "nix/outputs/perSystem/checks.nix"; }
-        { src = "boilerplate/nix/outputs/perSystem/packages.d/00-rust.nix"; dest = "nix/outputs/perSystem/packages.d/00-rust.nix"; }
-        { src = "boilerplate/crates/core/Cargo.toml"; dest = "crates/core/Cargo.toml"; }
-        { src = "boilerplate/crates/core/src/lib.rs"; dest = "crates/core/src/lib.rs"; }
-      ];
+      boilerplate.dir = "boilerplate";
     }
   ];
 }
@@ -66,9 +52,9 @@ Generic configs kept in sync - changes here propagate to all projects:
 | `clippy.toml` | Clippy configuration |
 | `nix/outputs/perSystem/formatter.nix` | treefmt with rustfmt |
 
-### Boilerplate Files (via `boilerplate`)
+### Boilerplate Files (via `boilerplate.dir`)
 
-Spawned once, then yours to customize:
+Spawned once from `boilerplate/` directory, then yours to customize:
 
 | File | Purpose |
 |------|---------|
