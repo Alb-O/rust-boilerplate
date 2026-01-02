@@ -25,7 +25,7 @@
     in
     {
       default = rustPlatform.buildRustPackage {
-        pname = "$$crate_name$$";
+        pname = "@crate_name@";
         inherit version;
         src = rootSrc;
         cargoLock.lockFile = rootSrc + "/Cargo.lock";

@@ -19,9 +19,7 @@
     {
       default = pkgs.mkShell {
         # Compose with other devshells (e.g., lintfra) via devShells.d/
-        inputsFrom = builtins.attrValues (
-          builtins.removeAttrs self'.devShells [ "default" ]
-        );
+        inputsFrom = builtins.attrValues (builtins.removeAttrs self'.devShells [ "default" ]);
 
         packages = [
           rustToolchain

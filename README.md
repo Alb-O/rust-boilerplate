@@ -32,14 +32,14 @@ Add to your `.imp/gits/config.nix`:
         { src = "boilerplate/.envrc"; dest = ".envrc"; }
         { src = "boilerplate/.gitignore"; dest = ".gitignore"; }
         { src = "boilerplate/.rgignore"; dest = ".rgignore"; }
-        { src = "boilerplate/Cargo.toml.tmpl"; dest = "Cargo.toml"; }
-        { src = "boilerplate/flake.nix.tmpl"; dest = "flake.nix"; }
-        { src = "boilerplate/nix/flake/default.nix.tmpl"; dest = "nix/flake/default.nix"; }
+        { src = "boilerplate/Cargo.toml"; dest = "Cargo.toml"; }
+        { src = "boilerplate/flake.nix"; dest = "flake.nix"; }
+        { src = "boilerplate/nix/flake/default.nix"; dest = "nix/flake/default.nix"; }
         { src = "boilerplate/nix/flake/inputs.nix"; dest = "nix/flake/inputs.nix"; }
         { src = "boilerplate/nix/outputs/perSystem/devShells.nix"; dest = "nix/outputs/perSystem/devShells.nix"; }
         { src = "boilerplate/nix/outputs/perSystem/checks.nix"; dest = "nix/outputs/perSystem/checks.nix"; }
-        { src = "boilerplate/nix/outputs/perSystem/packages.d/00-rust.nix.tmpl"; dest = "nix/outputs/perSystem/packages.d/00-rust.nix"; }
-        { src = "boilerplate/crates/core/Cargo.toml.tmpl"; dest = "crates/core/Cargo.toml"; }
+        { src = "boilerplate/nix/outputs/perSystem/packages.d/00-rust.nix"; dest = "nix/outputs/perSystem/packages.d/00-rust.nix"; }
+        { src = "boilerplate/crates/core/Cargo.toml"; dest = "crates/core/Cargo.toml"; }
         { src = "boilerplate/crates/core/src/lib.rs"; dest = "crates/core/src/lib.rs"; }
       ];
     }
@@ -81,6 +81,8 @@ Spawned once, then yours to customize:
 | `crates/core/` | Starter crate scaffold |
 
 ## Template Variables
+
+Uses `@var@` syntax (nix-style substituteAll convention). Variables are substituted when boilerplate files are spawned.
 
 | Variable | Description |
 |----------|-------------|

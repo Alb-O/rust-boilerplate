@@ -2,7 +2,7 @@
 # Regenerate with: nix run .#imp-flake
 
 {
-  description = "$$project_name$$";
+  description = "@project_name@";
   inputs = {
     # Core inputs
     flake-parts.url = "github:hercules-ci/flake-parts";
