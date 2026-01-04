@@ -18,12 +18,12 @@
       self,
       self',
       treefmt-nix,
-      imp-fmt-lib,
+      imp-fmt,
       rootSrc,
       ...
     }:
     let
-      formatterEval = imp-fmt-lib.makeEval {
+      formatterEval = imp-fmt.makeEval {
         inherit pkgs treefmt-nix;
         excludes = [
           "target/*"
